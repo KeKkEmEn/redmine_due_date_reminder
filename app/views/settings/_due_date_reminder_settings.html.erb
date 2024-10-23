@@ -1,0 +1,5 @@
+<!-- plugins/redmine_due_date_reminder/app/views/settings/_due_date_reminder_settings.html.erb -->
+<p>
+  <label for="settings_reminder_days_before"><%= l(:label_reminder_days_before) %></label>
+  <%= text_field_tag 'settings[reminder_days_before]', Setting.plugin_redmine_due_date_reminder['reminder_days_before'], size: 5 %>
+</p>
