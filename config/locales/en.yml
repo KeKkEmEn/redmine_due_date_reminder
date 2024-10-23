@@ -2,3 +2,5 @@
 en:
   label_reminder_days_before: "Send reminders X days before due date"
   label_reminder_days_before_description: "Specify how many days before the due date you want to send reminders."
+  label_send_due_date_reminder: "Send Reminder"
+  notice_due_date_reminder_sent: "Reminder email sent successfully."
