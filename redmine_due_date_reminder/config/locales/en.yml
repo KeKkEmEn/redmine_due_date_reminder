@@ -1,4 +1,0 @@
-# plugins/redmine_due_date_reminder/config/locales/en.yml
-en:
-  label_reminder_days_before: "Send reminders X days before due date"
-  label_reminder_days_before_description: "Specify how many days before the due date you want to send reminders."
