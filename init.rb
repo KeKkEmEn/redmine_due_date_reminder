@@ -12,6 +12,3 @@ Redmine::Plugin.register :redmine_due_date_reminder do
     'reminder_days_before' => 3
   }, partial: 'settings/due_date_reminder_settings'
 end
-
-# Hook into the issue model to send reminders
-require_dependency 'due_date_reminder'
