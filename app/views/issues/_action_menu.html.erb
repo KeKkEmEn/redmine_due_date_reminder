@@ -1,0 +1,3 @@
+<% if User.current.allowed_to?(:send_due_date_reminder, @project) %>
+  <%= link_to l(:label_send_due_date_reminder), send_due_date_reminder_issue_path(@issue), method: :post, class: 'icon icon-mail' %>
+<% end %>
