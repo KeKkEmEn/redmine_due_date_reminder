@@ -8,11 +8,11 @@ Redmine::Plugin.register :redmine_due_date_reminder do
   version '1.0.1'
   requires_redmine version_or_higher: '5.1.2'
 
+  project_module :due_date_reminder do
+    permission :send_due_date_reminder, :due_date_reminder => :send_reminder
+  end
+  
   settings default: {
     'reminder_days_before' => 3
   }, partial: 'settings/due_date_reminder_settings'
-end
-
-project_module :due_date_reminder do
-  permission :send_due_date_reminder, :due_date_reminder => :send_reminder
 end
