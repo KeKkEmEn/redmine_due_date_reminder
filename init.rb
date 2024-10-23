@@ -12,3 +12,7 @@ Redmine::Plugin.register :redmine_due_date_reminder do
     'reminder_days_before' => 3
   }, partial: 'settings/due_date_reminder_settings'
 end
+
+project_module :due_date_reminder do
+  permission :send_due_date_reminder, :due_date_reminder => :send_reminder
+end
