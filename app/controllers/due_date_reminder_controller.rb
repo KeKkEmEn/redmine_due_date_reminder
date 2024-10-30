@@ -9,7 +9,7 @@ def send_reminder
 
   if recipient_user
     # Use a standard email method if deliver_due_date_reminder is causing issues
-    Mailer.issue_edit(recipient_user, @issue.journals.last, @issue).deliver_now
+    Mailer.issue_edit(recipient_user, @issue).deliver_now
     redirect_to @issue, notice: 'Reminder sent successfully!'
   else
     redirect_to @issue, alert: 'No recipient found for this reminder. Please assign the issue to a user first.'
