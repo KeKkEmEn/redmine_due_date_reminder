@@ -9,7 +9,7 @@ Redmine::Plugin.register :redmine_due_date_reminder do
   requires_redmine version_or_higher: '5.1.2'
 
   project_module :due_date_reminder do
-    permission :send_due_date_reminder, :due_date_reminder => :send_reminder
+    permission :send_due_date_reminder, { :due_date_reminder => [:send_reminder] }, :require => :loggedin
   end
   
   settings default: {
