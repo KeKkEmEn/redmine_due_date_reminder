@@ -11,21 +11,3 @@ class DueDateReminderMailer < Mailer
     end
   end
 
-  # Method to handle issue edits
-  def self.issue_edit(recipient_user, issue, journal = nil)
-    # Ensure the recipient_user is valid
-    recipients = recipient_user.try(:mail)
-    
-    return if recipients.blank?  # Exit if no recipient is found
-
-    # Assuming 'journal' holds some details about the issue changes
-    subject = "Issue ##{issue.id} has been updated"
-    
-    mail(to: recipients, subject: subject) do |format|
-      format.text do
-        changes = journal&.details || "No changes were made."
-        render plain: "The following changes were made to issue ##{issue.id}: #{changes}"
-      end
-    end
-  end
-end
