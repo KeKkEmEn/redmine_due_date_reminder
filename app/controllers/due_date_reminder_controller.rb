@@ -1,5 +1,7 @@
 class DueDateReminderController < ApplicationController
-    skip_before_action :authorize, only: [:send_reminder]
+ before_action :find_issue, only: [:send_reminder]
+ before_action :authorize, only: [:send_reminder]
+ skip_before_action :authorize, only: [:send_reminder]
     
     def send_reminder
       DueDateReminderMailer.send_reminder(@issue).deliver_now
